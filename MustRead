@@ -1,0 +1,23 @@
+This is a detailed and essential reading list. Here are the links and brief summaries for the most crucial papers that form the basis of current LLMs from Google, DeepMind, OpenAI, and by extension, DeepSeek.
+📖 Must-Read Foundational AI Papers (Links and Summaries)
+1. Attention Is All You Need (The Transformer)
+ * ArXiv Link: https://arxiv.org/abs/1706.03762
+ * Summary: This paper introduced the Transformer architecture, which completely dispensed with recurrent and convolutional layers. The Transformer relies solely on the Self-Attention mechanism to draw global dependencies across input and output. This breakthrough enabled massive parallelization, drastically accelerating training time and allowing the creation of much deeper models.
+2. BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding
+ * Source: ACL Anthology (or similar academic source)
+ * Link: https://aclanthology.org/N19-1423.pdf
+ * Summary: Introduced BERT (Bidirectional Encoder Representations from Transformers). BERT's core idea was to train a deep bidirectional representation by jointly conditioning on both the left and right context in all layers. It used a Masked Language Model (MLM) objective and a Next Sentence Prediction (NSP) task, allowing the pre-trained model to be fine-tuned with minimal changes for a wide range of downstream Natural Language Understanding (NLU) tasks.
+3. Improving Language Understanding by Generative Pre-Training (GPT-1)
+ * OpenAI Link (PDF): https://cdn.openai.com/research-covers/language-unsupervised/language_understanding_paper.pdf
+ * Summary: This work laid the groundwork for the modern LLM paradigm: Generative Pre-training on a large, unlabeled corpus, followed by Discriminative Fine-tuning for specific tasks. It showed that the generative pre-training of a large, one-directional Transformer model was highly effective for learning universal language representations, achieving state-of-the-art results on 9 out of 12 NLU tasks studied.
+4. Language Models are Few-Shot Learners (GPT-3)
+ * NIPS Paper Link (PDF): https://proceedings.neurips.cc/paper/2020/file/1457c0d6bfcb4967418bfb8ac142f64a-Paper.pdf
+ * Summary: The paper that introduced GPT-3 and popularized the concept of scaling laws. Its key finding was that as LLMs reach massive scales (175 billion parameters), they exhibit powerful "in-context learning" capabilities. They can perform new tasks—like translation or summarization—simply by being given a few examples in the prompt (few-shot learning), without any need for gradient updates or fine-tuning.
+5. Training Language Models to Follow Instructions with Human Feedback (InstructGPT/RLHF)
+ * OpenAI Link (Blog): https://openai.com/index/learning-to-summarize-with-human-feedback/
+ * Summary: This paper, which led directly to InstructGPT and subsequently ChatGPT, introduced the core technique for model alignment: Reinforcement Learning from Human Feedback (RLHF). Instead of optimizing for next-token prediction, it fine-tunes the model to align its outputs with human preferences (helpful, harmless, and honest). This process involves training a Reward Model (RM) based on human-labeled comparison data.
+6. Gemini: A Family of Highly Capable Multimodal Models
+ * ResearchGate Link (PDF): https://www.researchgate.net/publication/392469607_Gemini_A_Family_of_Highly_Capable_Multimodal_Models
+ * Summary: This is the technical report for the Gemini models, whose central contribution is native multimodality. Unlike models that connect a text model and an image model via a small adapter, Gemini was pre-trained from the ground up on text, image, video, and audio data. This allows for deep, cross-modal reasoning and seamless integration of different data types within the same model architecture.
+You can learn more about the initial GPT architecture from this video, GPT Explained! https://www.youtube.com/watch?v=9ebPNEHRwXU.
+
